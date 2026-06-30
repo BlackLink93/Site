@@ -1,0 +1,77 @@
+.slider-section {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.slider-section h1 {
+    font-weight: 300;
+    color: #313131;
+}
+
+.slider-section p {
+    color: #616161;
+}
+
+.slider-container {
+    max-width: 1200px;
+    height: 375px;
+    margin: 30px auto 0;
+    position: relative;
+}
+
+.slider-image {
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 6px;
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+    width: 25%;
+    opacity: 0;
+    transition: opacity 350ms ease-in-out;
+}
+
+.slider-arrow.left {
+    left: 0;
+    background: linear-gradient(90deg, rgba(0,18,36,0.55) 0%, rgba(0,18,36,0) 100%);
+}
+
+.slider-arrow.right {
+    right: 0;
+    background: linear-gradient(-90deg, rgba(0,18,36,0.55) 0%, rgba(0,18,36,0) 100%);
+}
+
+.slider-container:hover .slider-arrow {
+    opacity: 1;
+}
+
+/* блок Bootstrap-карусели */
+.carousel {
+    max-width: 1200px;
+    margin: 30px auto 0;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.carousel img {
+    height: 375px;
+    object-fit: cover;
+}
+
+/* блок тарифов из примеров Bootstrap, my-5 вместо mb-3 */
+.pricing-section {
+    margin: 60px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .slider-container,
+    .carousel img {
+        height: 220px;
+    }
+}
