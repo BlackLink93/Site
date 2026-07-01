@@ -456,7 +456,6 @@ footer {
     }
 
     body {
-        border: 5px solid #3a3838;
         box-sizing: border-box;
     }
 
@@ -490,11 +489,15 @@ footer {
     }
 
     header ul.responsive {
-        height: 200px;
+        height: auto;
+        max-height: 400px;
+        padding: 5px 0 10px;
+        overflow: hidden;
     }
 
     header ul.responsive li {
-        display: inline-block;
+        display: block;
+        text-align: center;
     }
 
 }
