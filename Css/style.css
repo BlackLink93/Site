@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -188,7 +194,8 @@ footer nav a:hover {
     margin: 50px 0;
     display: flex;
     flex-wrap: wrap;
-
+    width: 100%;
+    overflow: hidden;
 }
 
 .Menu-item {
@@ -574,6 +581,7 @@ footer {
     scroll-snap-type: x mandatory;
     gap: 20px;
     padding: 10px;
+    width: 100%;
 }
 
 .testimonials-inner::-webkit-scrollbar {
