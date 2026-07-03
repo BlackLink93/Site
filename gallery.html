@@ -8,39 +8,60 @@
     <link rel="stylesheet" type="text/css" href="Css/style.css">
     <link rel="stylesheet" type="text/css" href="Css/fonts.css">
     <link rel="stylesheet" type="text/css" href="Css/gallery.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap&subset=cyrillic"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap&subset=cyrillic" rel="stylesheet">
     <!-- Bootstrap 5 -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
         integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
-    <style media="screen">
-        body {
-            font-family: "OpenSans-light", Arial, Helvetica, sans-serif;
-        }
+    <style>
+        body { font-family: "OpenSans-light", Arial, Helvetica, sans-serif; }
+        ul { font-family: "Roboto", "OpenSans-light", Arial, Helvetica, sans-serif; font-weight: 400; }
 
-        ul {
-            font-family: "Roboto", "OpenSans-light", Arial, Helvetica, sans-serif;
-            font-weight: 400;
+        .gallery-section {
+            padding: 50px 20px;
+            background: #f8f9fa;
+        }
+        .gallery-category {
+            margin-bottom: 50px;
+        }
+        .gallery-category h4 {
+            text-align: center;
+            font-weight: 300;
+            font-size: 1.4rem;
+            color: #313131;
+            margin-bottom: 16px;
+        }
+        /* все фото одинаковой высоты, без искажений */
+        .gallery-img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 4px;
+            display: block;
+        }
+        .gallery-img.tall {
+            height: 340px;
+        }
+        @media (max-width: 768px) {
+            .gallery-img, .gallery-img.tall { height: 200px; }
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/slider.js"></script>
+    <script src="JS/script.js"></script>
+    <script src="JS/slider.js"></script>
 </head>
 
 <body>
     <header>
         <nav>
-            <img src="Img/1681558827_papik-pro-p-logotip-kompyuternogo-kluba-vektor-28.jpg" alt="Логотип клуба"
-                class="logo" width="100">
+            <img src="Img/1681558827_papik-pro-p-logotip-kompyuternogo-kluba-vektor-28.jpg" alt="Логотип клуба" class="logo" width="100">
             <ul>
                 <li class="header-inner--items"><a href="index.html#top">Главная</a></li>
                 <li class="header-inner--items"><a href="index.html#services">Услуги</a></li>
                 <li class="header-inner--items"><a href="index.html#menu">Наши предложения</a></li>
-                <li class="header-inner--items"><a href="gallery.html" title="Фотогалерея и слайдеры">Галерея</a></li>
+                <li class="header-inner--items"><a href="gallery.html" title="Фотогалерея">Галерея</a></li>
                 <li class="header-inner--items"><a href="blog.html">Блог</a></li>
                 <li class="header-inner--items"><a href="contacts.html">Контакты</a></li>
-                <li class="header-inner--items"><a href="shop.html" title="Магазин клуба">Магазин</a></li>
+                <li class="header-inner--items"><a href="shop.html">Магазин</a></li>
             </ul>
             <div id="hamburger" class="icon">&#9776;</div>
         </nav>
@@ -51,7 +72,7 @@
             <img src="Img/large_80.jpg" alt="Обложка" class="top-img" style="width:100%; height:300px; object-fit:cover;">
         </section>
 
-        <!-- Слайдер на чистом JS / jQuery -->
+        <!-- Слайдер на jQuery -->
         <section class="slider-section">
             <h1 class="main-title">Наши залы</h1>
             <div class="delimiter"></div>
@@ -63,12 +84,11 @@
             </div>
         </section>
 
-        <!-- Слайдер на Bootstrap 5 -->
+        <!-- Слайдер Bootstrap — Турниры -->
         <section class="slider-section">
             <h1 class="main-title">Наши турниры</h1>
             <div class="delimiter"></div>
             <p class="main-title-description">Турниры и мероприятия клуба</p>
-
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -77,24 +97,24 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="Img/slider/bs01.jpg" class="d-block w-100" alt="VR-зона">
+                        <img src="Img/166564948711.jpg" class="d-block w-100" style="height:420px; object-fit:cover;" alt="Турнир">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>VR-зона</h5>
-                            <p>Полное погружение в виртуальные миры</p>
+                            <h5>Киберспортивный турнир</h5>
+                            <p>Соревнования среди лучших игроков клуба</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="Img/slider/bs02.jpg" class="d-block w-100" alt="Игровые ПК">
+                        <img src="Img/tournament-green.jpg" class="d-block w-100" style="height:420px; object-fit:cover;" alt="Турнир">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Игровые ПК</h5>
-                            <p>Мощные сборки для современных игр</p>
+                            <h5>Командные баталии</h5>
+                            <p>Игроки из разных городов сражаются за призы</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="Img/slider/bs03.jpg" class="d-block w-100" alt="Турниры">
+                        <img src="Img/tournament-big.jpg" class="d-block w-100" style="height:420px; object-fit:cover;" alt="Турнир">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Турниры</h5>
-                            <p>Регулярные киберспортивные события</p>
+                            <h5>Большие соревнования</h5>
+                            <p>Масштабные турниры с призовым фондом</p>
                         </div>
                     </div>
                 </div>
@@ -110,71 +130,88 @@
         </section>
 
         <!-- Фотогалерея -->
-        <section style="padding: 60px 20px; background: #f8f9fa;">
+        <section class="gallery-section">
             <h1 class="main-title">Фотогалерея</h1>
             <div class="delimiter"></div>
-            <p class="main-title-description">Наш зал, ПК, VR-оборудование и соревнования</p>
+            <p class="main-title-description" style="margin-bottom: 40px;">Наш зал, ПК, VR-оборудование и соревнования</p>
 
-            <div class="container mt-5">
-                <!-- Зал -->
-                <h4 class="text-center mb-3" style="font-weight:300; color:#313131;">Игровой зал</h4>
-                <div class="row g-3 mb-5">
-                    <div class="col-12 col-md-8">
-                        <img src="Img/large_80.jpg" class="w-100 rounded shadow-sm"
-                            style="height:320px; object-fit:cover;" alt="Игровой зал">
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <img src="Img/d6956c4acbe74c1bbbeb511670da18ac.jpg" class="w-100 rounded shadow-sm"
-                            style="height:320px; object-fit:cover;" alt="Игровые ПК в зале">
+            <div class="container">
+
+                <!-- Залы -->
+                <div class="gallery-category">
+                    <h4>Игровой зал</h4>
+                    <div class="row g-3">
+                        <div class="col-12 col-md-6">
+                            <img src="Img/large_80.jpg" class="gallery-img tall" alt="Игровой зал">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <img src="Img/hall-bootcamp.png" class="gallery-img" alt="VIP зал">
+                                </div>
+                                <div class="col-12">
+                                    <img src="Img/hall-red.jpg" class="gallery-img" alt="Игровой зал">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- ПК и оборудование -->
-                <h4 class="text-center mb-3" style="font-weight:300; color:#313131;">Игровые ПК</h4>
-                <div class="row g-3 mb-5">
-                    <div class="col-12 col-md-4">
-                        <img src="Img/1-copy-21.jpg" class="w-100 rounded shadow-sm"
-                            style="height:260px; object-fit:cover;" alt="Игровой ПК">
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <img src="Img/blog/blog00.jpg" class="w-100 rounded shadow-sm"
-                            style="height:260px; object-fit:cover;" alt="ПК рабочее место">
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <img src="Img/blog/blog01.jpg" class="w-100 rounded shadow-sm"
-                            style="height:260px; object-fit:cover;" alt="Геймерская периферия">
+                <!-- Игровые ПК -->
+                <div class="gallery-category">
+                    <h4>Игровые ПК</h4>
+                    <div class="row g-3">
+                        <div class="col-12 col-md-4">
+                            <img src="Img/d6956c4acbe74c1bbbeb511670da18ac.jpg" class="gallery-img" alt="Игровой ПК">
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <img src="Img/pc-hyperpc.jpg" class="gallery-img" alt="HyperPC сборки">
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <img src="Img/pc-rgb.jpg" class="gallery-img" alt="RGB системники">
+                        </div>
                     </div>
                 </div>
 
-                <!-- VR -->
-                <h4 class="text-center mb-3" style="font-weight:300; color:#313131;">VR-зона</h4>
-                <div class="row g-3 mb-5">
-                    <div class="col-12 col-md-6">
-                        <img src="Img/IMGP4896.jpg" class="w-100 rounded shadow-sm"
-                            style="height:280px; object-fit:cover;" alt="VR-шлем">
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <img src="Img/blog/blog02.jpg" class="w-100 rounded shadow-sm"
-                            style="height:280px; object-fit:cover;" alt="VR-зона клуба">
+                <!-- VR-зона -->
+                <div class="gallery-category">
+                    <h4>VR-зона</h4>
+                    <div class="row g-3">
+                        <div class="col-12 col-md-4">
+                            <img src="Img/IMGP4896.jpg" class="gallery-img" alt="VR симулятор">
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <img src="Img/vr-beatsaber.jpg" class="gallery-img" alt="Beat Saber VR">
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <img src="Img/vr-motion.jpg" class="gallery-img" alt="VR Motion">
+                        </div>
                     </div>
                 </div>
 
                 <!-- Соревнования -->
-                <h4 class="text-center mb-3" style="font-weight:300; color:#313131;">Соревнования</h4>
-                <div class="row g-3 mb-5">
-                    <div class="col-12 col-md-8">
-                        <img src="Img/166564948711.jpg" class="w-100 rounded shadow-sm"
-                            style="height:300px; object-fit:cover;" alt="Киберспортивный турнир">
-                    </div>
-                    <div class="col-6 col-md-4 d-flex flex-column gap-3">
-                        <img src="Img/blog/blog03.jpg" class="w-100 rounded shadow-sm"
-                            style="height:140px; object-fit:cover;" alt="Участники турнира">
-                        <img src="Img/blog/blog04.jpg" class="w-100 rounded shadow-sm"
-                            style="height:140px; object-fit:cover;" alt="Награждение победителей">
+                <div class="gallery-category">
+                    <h4>Соревнования</h4>
+                    <div class="row g-3">
+                        <div class="col-12 col-md-8">
+                            <img src="Img/tournament-big.jpg" class="gallery-img tall" alt="Большой турнир">
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <img src="Img/tournament-green.jpg" class="gallery-img" alt="Командный турнир">
+                                </div>
+                                <div class="col-12">
+                                    <img src="Img/166564948711.jpg" class="gallery-img" alt="Турнир клуба">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </section>
+
     </main>
 
     <footer>
