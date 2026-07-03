@@ -38,8 +38,9 @@
             border-radius: 4px;
             display: block;
         }
+        /* tall = точно высота двух правых фото + gap между ними (g-3 = 1rem = 16px) */
         .gallery-img.tall {
-            height: 340px;
+            height: calc(260px * 2 + 1rem);
         }
         @media (max-width: 768px) {
             .gallery-img, .gallery-img.tall { height: 200px; }
@@ -70,63 +71,6 @@
     <main>
         <section class="top" id="top">
             <img src="Img/large_80.jpg" alt="Обложка" class="top-img" style="width:100%; height:300px; object-fit:cover;">
-        </section>
-
-        <!-- Слайдер на jQuery -->
-        <section class="slider-section">
-            <h1 class="main-title">Наши залы</h1>
-            <div class="delimiter"></div>
-            <p class="main-title-description">Атмосфера наших игровых залов</p>
-            <div class="slider-container">
-                <div class="slider-arrow left"></div>
-                <div class="slider-arrow right"></div>
-                <div class="slider-image"></div>
-            </div>
-        </section>
-
-        <!-- Слайдер Bootstrap — Турниры -->
-        <section class="slider-section">
-            <h1 class="main-title">Наши турниры</h1>
-            <div class="delimiter"></div>
-            <p class="main-title-description">Турниры и мероприятия клуба</p>
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="Img/166564948711.jpg" class="d-block w-100" style="height:420px; object-fit:cover;" alt="Турнир">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Киберспортивный турнир</h5>
-                            <p>Соревнования среди лучших игроков клуба</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="Img/tournament-green.jpg" class="d-block w-100" style="height:420px; object-fit:cover;" alt="Турнир">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Командные баталии</h5>
-                            <p>Игроки из разных городов сражаются за призы</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="Img/tournament-big.jpg" class="d-block w-100" style="height:420px; object-fit:cover;" alt="Турнир">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Большие соревнования</h5>
-                            <p>Масштабные турниры с призовым фондом</p>
-                        </div>
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </a>
-            </div>
         </section>
 
         <!-- Фотогалерея -->
